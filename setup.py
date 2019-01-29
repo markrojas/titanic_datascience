@@ -21,8 +21,8 @@ setup(
     ],
     # Substitute <github_account> with the name of your GitHub account
     url='https://github.com/markrojas/titanic_datascience',
-    author='Mark Rojas',  # Substitute your name
-    author_email='rojas.mm@gmail.com',  # Substitute your email
+    author='Mark Rojas',
+    author_email='rojas.mm@gmail.com',
     license='MIT',
     packages=['titanic'],
 )
