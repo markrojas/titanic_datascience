@@ -1,5 +1,5 @@
-from distutils.core import setup
-
+#from distutils.core import setup
+from setuptools import setup
 
 def readme():
     """Import the README.md Markdown file and try to convert it to RST format."""
@@ -19,10 +19,20 @@ setup(
     classifiers=[
         'Programming Language :: Python :: 3',
     ],
-    # Substitute <github_account> with the name of your GitHub account
     url='https://github.com/markrojas/titanic_datascience',
     author='Mark Rojas',
     author_email='rojas.mm@gmail.com',
     license='MIT',
     packages=['titanic'],
+    install_requires=[
+	'pypandoc>=1.4',
+	'pytest>=3.2.3',
+	'pytest-runner>=2.12.1',
+	'click>=7.0'],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
+    entry_points='''
+        [console_scripts]
+        titanic_analysis=titanic.command_line:titanic_analysis
+    ''',
 )
